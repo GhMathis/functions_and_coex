@@ -1,5 +1,6 @@
 library(ggplot2)
-
+library(dplyr)
+library(tidyr)
 library(lme4)
 ###################################################
     ########## ENZYMATIQUE ANNALYSYS ##########
@@ -16,9 +17,9 @@ str(enz_act)
 str(interactions)
 
 
-enz_act2 <- read.delim2("oster_data_2022/enz_act.txt", header = TRUE)
-
+##### some visuals verification of the wet and frost soils #####
 ### cali_group = soil samples incubate during the same day
+enz_act2 <- read.delim2("oster_data_2022/enz_act.txt", header = TRUE)
 str(enz_act2)
 temp = subset(enz_act2, sample == "a" & plot != 0)
 str(temp)
@@ -31,14 +32,14 @@ mean(subset(enz_act, comments != "" & type == "triplet" & enz == "beta_glu")$nyt
 mean(subset(enz_act, comments == "" & type == "triplet" & enz == "beta_glu")$nytro_release)
 mean(subset(enz_act, comments != "" & type == "triplet" & enz == "phospha")$nytro_release)
 mean(subset(enz_act, comments == "" & type == "triplet" & enz == "phospha")$nytro_release)
-######given means frost or wet sample 
+
 ##### linear model between control an nitorgen treatment for both enzyme #####
 ## beta
 beta_data <- subset(enz_act, enz == "beta_glu")
 model_beta <- lm(beta_data$nytro_release~beta_data$nitrogen)
 summary(model_beta)
 anova(model_beta)
-
+hist(subset(enz_act$nytro_release, enz_act$enz == "beta_glu"))
 
 par(mfrow = c(2,2))
 plot(model_beta, las = 1) ### normal distib OK
@@ -120,18 +121,42 @@ par(mfrow = c(1,1))
 
 
 ######## Enzyme and triplet coexistence ########
-head(interactions)
+tail(interactions)
+tail(enz_act)
 temp = c()
 names(interactions)[1]="nitrogen"
 interactions$nitrogen = as.factor(rep(0,nrow(interactions)))
-enz_act$species = apply( coex[,3:5], 1, 
+coex$species = apply( coex[,3:5], 1, 
         function(x) paste(x[!is.na(x)], collapse = "_"))
 
-enz_triplet = subset(enz_act, type == "triplet")
-enz_triplet = enz_triplet[,-c(5:8)]
-enz_triplet = enz_triplet %>%
+
+enz_act_wider = enz_act[,-c(5,6,8)]
+enz_act_wider = enz_act_wider %>%
   pivot_wider(names_from = enz, values_from = nytro_release)
-tail(enz_triplet)
-main_data = full_join(enz_act,interactions, by = c("species", "nitrogen"))
+enz_act_wider$species = coex$species
+enz_triplet = subset(enz_act_wider, type == "triplet")
+
+str(enz_act_wider)
+
+main_data = full_join(enz_triplet,interactions, by = c("species"))
+
+main_data = main_data %>%
+  pivot_longer(c(beta_glu,phospha),
+               names_to = "enz", values_to = "nytro_release" )
 tail(main_data)
 head(main_data)
+str(main_data)
+nrow(main_data)
+
+ggplot(main_data)+
+  facet_wrap(~enz)+
+  geom_point(aes(nytro_release, Omega, col= species))
+
+##### 
+
+shape_df <- shape.df(enz_act, cover, "nytro_release")
+trait_mono_beta = subset(shape_df[[1]], shape_df[[1]]$enz == "beta_glu")
+trait_triplet_beta =subset(shape_df[[2]], shape_df[[2]]$enz == "beta_glu")
+
+commu.traits.metrics(trait_mono = trait_mono_beta, trait_triplet = trait_triplet_beta,
+                     cover = cover, trait_name = "nytro_release" )

@@ -275,15 +275,15 @@ Abs	enz	sample	nitrogen	plot	calibr_cons	cali_group
 0.1144	beta_glu	b	1	59		4		
 0.1045	beta_glu	b	0	60		4		
 0.1087	beta_glu	b	1	60		4		
-0.0494	beta_glu	na	na	0	0	5		
-0.0966	beta_glu	na	na	0	10	5		
-0.1358	beta_glu	na	na	0	25	5		
-0.2264	beta_glu	na	na	0	50	5		
-0.392	beta_glu	na	na	0	100	5		
-0.7194	beta_glu	na	na	0	200	5		
-1.0475	beta_glu	na	na	0	300	5		
-1.7239	beta_glu	na	na	0	500	5		
-2.2734	beta_glu	na	na	0	650	5		
+0.0494	phospha	na	na	0	0	5		
+0.0966	phospha	na	na	0	10	5		
+0.1358	phospha	na	na	0	25	5		
+0.2264	phospha	na	na	0	50	5		
+0.392	phospha	na	na	0	100	5		
+0.7194	phospha	na	na	0	200	5		
+1.0475	phospha	na	na	0	300	5		
+1.7239	phospha	na	na	0	500	5		
+2.2734	phospha	na	na	0	650	5		
 0.866	phospha	a	0	1		5		
 0.9676	phospha	a	1	1		5		
 0.9951	phospha	a	0	2		5		

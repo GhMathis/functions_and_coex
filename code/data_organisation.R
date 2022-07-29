@@ -1,5 +1,3 @@
-install.packages("dplyr")
-install.packages("tidyr")
 for (i in 1){
   library(ggplot2)
   library(dplyr)
@@ -9,18 +7,19 @@ for (i in 1){
 }
 
 #### load and shape data ####
-setwd("~/Fac/Cesure2/Plant species coexistence/annalisys/oster_data_2022")
+setwd("~/Fac/Cesure2/Plant_species_coexistence/functions_and_coex/oster_data_2022")
 enz_act <- read.delim2("enz_act.txt", header = TRUE)
 soil_weight <- read.delim2("soil_weight.txt", header = TRUE)
 soil_timing <- read.delim2("soil_timing.txt", header = TRUE)
 par_height <- read.delim2("PAR_and_height6.txt",header = TRUE)
 herbi <- read.delim2("herbi_patho_ostermundigen_2022.txt", header = TRUE)
-coex <-read.delim2("coexistence_2022.txt", header =TRUE)
+cover <-read.delim2("cover_2022.txt", header =TRUE)
+bioma <- read.delim2("biomasse_OM_2022.txt", header =TRUE)
 ###### Enzymatic data #######
 head(soil_weight)
 str(soil_weight)
 head(enz_act)
-
+test = 
 ### format, shape and merge the data properly
 ## enz_act
 enz_act = enz_act[,1:7]
@@ -33,6 +32,7 @@ enz_act$plot = as.factor(enz_act$plot)
 enz_act$cali_group = as.factor(enz_act$cali_group)
 names(enz_act)[6]="p_nytro_C"
 enz_act$p_nytro_C = enz_act$p_nytro_C
+enz_act = enz_act[order(enz_act$enz, enz_act$plot),]
 
 ##soil_weight
 names(soil_weight)[1:2]=c("plot","nitrogen")
@@ -60,7 +60,8 @@ enz_act = full_join(enz_act,soil_weight, by = c("plot", "nitrogen"))
 enz_act = full_join(enz_act,soil_timing, by = c("plot", "nitrogen","enz"))
 
 #remove useless col
-enz_act = enz_act[, c(1:7, 10:13)]
+enz_act_brute_data = enz_act[, c(1:7, 10:13)]
+enz_act_brute_data = enz_act
 
 head(enz_act)
 str(enz_act)
@@ -74,25 +75,26 @@ for (n_cali in 1:6){
   temp = subset(data_cali, cali_group == n_cali)
   coefs = as.data.frame(lm(Abs~p_nytro_C, data = temp)$coefficients)
   lm_cali = rbind(lm_cali,data.frame(intercept= coefs[1,], slope = coefs[2,],
-                              cali_group = n_cali))
+                                     cali_group = n_cali))
 } 
 str(lm_cali)
 
 ### calculation of the concentrations given linear models of calibrations
-data = subset(enz_act, sample != "cali")
-for (n_abs in 1:nrow(data)){
-    n_cali = enz_act$cali_group[n_abs]
-    data$p_nytro_C[n_abs] = ((data$Abs[n_abs] - lm_cali[n_cali,1]) /
-      (lm_cali[n_cali,2] * data$dry_weight_ratio[n_abs]))
-      
+data_enz = subset(enz_act, sample != "cali")
+
+for (n_abs in 1:nrow(data_enz)){
+  n_cali = enz_act$cali_group[n_abs]
+  data_enz$p_nytro_C[n_abs] = ((data_enz$Abs[n_abs] - lm_cali[n_cali,1]) /
+                             (lm_cali[n_cali,2] * data_enz$dry_weight_ratio[n_abs]))
+  
   
 }
-tail(data[480,])
+tail(data_enz)
 ggplot() +
-  geom_point(data = data,
+  geom_point(data = data_enz,
              aes(p_nytro_C, Abs,col=enz,shape=sample),
              cex = 1.5,color = "black")+
-  geom_point(data = data,aes(p_nytro_C, Abs,col=enz,shape=sample),cex = 1)+
+  geom_point(data = data_enz,aes(p_nytro_C, Abs,col=enz,shape=sample),cex = 1)+
   facet_wrap(~cali_group)+
   geom_smooth(data =subset(enz_act, sample == "cali"),
               aes(p_nytro_C,Abs ),method = lm,se = F,linetype=2, size=1)+
@@ -103,34 +105,40 @@ ggplot() +
         axis.text.y = element_text( size=25),
         axis.title=element_text(size=30))
 ggplot()  +
-  geom_boxplot(data = data,aes(sample, p_nytro_C))+
+  geom_boxplot(data = data_enz,aes(sample, p_nytro_C))+
   facet_wrap(~enz)
 ggplot()+
   facet_wrap(~enz)+
-  geom_boxplot(data = data,aes(date_time, p_nytro_C))
-head(data)
+  geom_boxplot(data = data_enz,aes(date_time, p_nytro_C))
+head(data_enz)
 
-main_data =data.frame(nytro_release = (subset(data,sample == "a")$p_nytro_C -
-               subset(data,sample == "b")$p_nytro_C) * 1/139)
+enz_act =data.frame(nytro_release = (subset(data_enz,sample == "a")$p_nytro_C -
+                                       subset(data_enz,sample == "b")$p_nytro_C) * 1/139)
 
-main_data = cbind(main_data, subset(data,sample == "b",
-                                    select = c(enz, nitrogen, plot,comments)))
-subset(main_data, nitrogen == 1 & plot == 22)$comment = c("wet","wet")
-subset(main_data, nitrogen == 1 & plot == 23)$comment =  c("wet","wet")
-subset(main_data, nitrogen == 1 & plot == 27)$comment =  c("wet","wet")
-subset(main_data, nitrogen == 1 & plot == 34)$comment =  c("wet","wet") 
-subset(main_data, nitrogen == 1 & plot == 31)$comment =  c("wet","wet") 
-subset(main_data, nitrogen == 1 & plot == 11)$comment =  c("wet","wet") 
-subset(main_data, nitrogen == 0 & plot == 6)$comment  =  c("wet","wet") 
-subset(main_data, nitrogen == 0 & plot == 58)$comment =  c("wet","wet")
-head(main_data)
-str(main_data)
+enz_act = cbind(enz_act, subset(data_enz,sample == "b",
+                                select = c(enz, nitrogen, plot,comments,date_time)))
+enz_act
 
-ggplot(main_data)+
+enz_act[c(enz_act$nitrogen == 1 & enz_act$plot == 22),]$comments = c("wet","wet")
+enz_act[c(enz_act$nitrogen == 1 & enz_act$plot == 23),]$comments = c("wet","wet")
+enz_act[c(enz_act$nitrogen == 1 & enz_act$plot == 27),]$comments = c("wet","wet")
+enz_act[c(enz_act$nitrogen == 1 & enz_act$plot == 34),]$comments = c("wet","wet")
+enz_act[c(enz_act$nitrogen == 1 & enz_act$plot == 31),]$comments = c("wet","wet")
+enz_act[c(enz_act$nitrogen == 1 & enz_act$plot == 11),]$comments = c("wet","wet")
+enz_act[c(enz_act$nitrogen == 0 & enz_act$plot == 6),]$comments = c("wet","wet")
+enz_act[c(enz_act$nitrogen == 0 & enz_act$plot == 58),]$comments = c("wet","wet")
+
+enz_act$type = ifelse(as.numeric(as.character(enz_act$plot)) <= 48 ,
+                      "triplet", "mono")
+
+head(enz_act)
+str(enz_act)
+
+ggplot(enz_act)+
   geom_boxplot(aes(nitrogen,nytro_release))+
   facet_wrap(~enz)
 ##### PAR and height data #####
-
+par_height= par_height[,-c(16,17)]
 str(par_height)
 nrow(par_height)
 names(par_height)[c(1,11)] = c("plot", "nitrogen")
@@ -151,17 +159,15 @@ par_height$PAR_diff = par_height$PAR_sup- par_height$PAR_inf
 
 str(par_height)
 
-par_height=par_height%>%
-  pivot_longer(c(species_1, species_2, species_3), names_to = "attribute",
-               values_to = "species")
-par_height=par_height[c(par_height$species != "-"),]
+par_height$species_2[c(par_height$species_2 == "-")] = NA
+par_height$species_3[c(par_height$species_3 == "-")] = NA
 str(par_height)
 
 ggplot(par_height)+
   facet_wrap(~nitrogen)+
   geom_boxplot(aes(date_char, mean_height))
-  geom_smooth(aes(date, mean_height), se=FALSE, span = 0.9)
-  
+geom_smooth(aes(date, mean_height), se=FALSE, span = 0.9)
+
 ##### herbi data#####
 
 head(herbi)
@@ -177,18 +183,43 @@ for(i in 5:20){
 
 ggplot(herbi)+
   geom_boxplot(aes(species,perc_dmg))
+##### cover data #####
 
+cover$species.2[cover$species.2 == "-"] = NA
+cover$species.3[cover$species.3 == "-"] = NA
+names(cover)[1 : 5]= c("plot", "nitrogen", "species_1", "species_2", "species_3")
+
+##### biomasse data #####
+str(bioma)
+bioma$biomasse = as.numeric(bioma$biomasse)
+bioma$plot = as.factor(bioma$plot)
+bioma$nitrogen = as.factor(bioma$nitrogen)
+bioma$type = ifelse(as.numeric(as.character(bioma$plot)) <= 48 ,
+                      "triplet", "mono")
+bioma <- bioma  %>% mutate_all(na_if,"")
 ##### recap data #####
-str(main_data)
-main_data = main_data%>%
-  pivot_wider(names_from = enz, values_from = nytro_release)
-
-nrow(main_data)
-ggplot(main_data)+
+str(enz_act)
+nrow(enz_act)
+ggplot(enz_act)+
   geom_point(aes(plot, nytro_release, col = enz))
 head(par_height)
 nrow(par_height)
 head(herbi)
 nrow(herbi)
-head(coex)
-nrow(coex)
+head(cover)
+nrow(cover)
+
+tail(bioma)
+nrow(bioma)
+
+##### Rdata #####
+
+setwd("~/Fac/Cesure2/Plant_species_coexistence/functions_and_coex")
+
+save(enz_act,file = "organized_data/enzimatic_activity.RData")
+save(par_height,file = "organized_data/par_and_height.RData")
+save(herbi,file = "organized_data/herbivoty_pathogen.RData")
+save(cover,file = "organized_data/cover.RData")
+save(bioma,file = "organized_data/bioma.RData")
+save(interactions, file = "organized_data/interactions_triplet.RData")
+nrow(enz_act)
