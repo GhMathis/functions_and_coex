@@ -3,7 +3,7 @@ library(readxl)
 library(writexl)
 
 #### load and shape data ####
-setwd("~/Fac/Cesure2/Plant species coexistence/oster_data_2022")
+setwd("~/Fac/Cesure2/Plant_species_coexistence/functions_and_coex/oster_data_2022")
 enz_act <- read.delim2("enz_act.txt",header= TRUE)
 enz_act = enz_act[,1:7]
 tail(enz_act)

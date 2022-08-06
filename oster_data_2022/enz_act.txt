@@ -1,542 +1,542 @@
-Abs	enz	sample	nitrogen	plot	calibr_cons	cali_group		
-0.0528	beta_glu	na	na	0	0	1		
-0.1005	beta_glu	na	na	0	10	1		
-0.1479	beta_glu	na	na	0	25	1		
-0.237	beta_glu	na	na	0	50	1		
-0.4092	beta_glu	na	na	0	100	1		
-0.7726	beta_glu	na	na	0	200	1		
-1.0983	beta_glu	na	na	0	300	1		
-1.8162	beta_glu	na	na	0	500	1		
-2.4602	beta_glu	na	na	0	650	1		
-0.6232	beta_glu	a	0	1		1		
-0.6115	beta_glu	a	1	1		1		
-0.7257	beta_glu	a	0	2		1		
-0.6695	beta_glu	a	1	2		1		
-0.6154	beta_glu	a	0	3		1		
-0.4727	beta_glu	a	1	3		1		
-1.0749	beta_glu	a	0	4		1		
-0.5586	beta_glu	a	1	4		1		
-0.5018	beta_glu	a	0	5		1		
-0.4996	beta_glu	a	1	5		1		
-0.3698	beta_glu	b	0	1		1		
-0.3964	beta_glu	b	1	1		1		
-0.499	beta_glu	b	0	2		1		
-0.5393	beta_glu	b	1	2		1		
-0.4478	beta_glu	b	0	3		1		
-0.4561	beta_glu	b	1	3		1		
-0.7064	beta_glu	b	0	4		1		
-0.5002	beta_glu	b	1	4		1		
-0.4426	beta_glu	b	0	5		1		
-0.4551	beta_glu	b	1	5		1		
-0.0485	beta_glu	na	na	0	0	2		
-0.098	beta_glu	na	na	0	10	2		
-0.1373	beta_glu	na	na	0	25	2		
-0.2349	beta_glu	na	na	0	50	2		
-0.392	beta_glu	na	na	0	100	2		
-0.7332	beta_glu	na	na	0	200	2		
-1.0466	beta_glu	na	na	0	300	2		
-1.7238	beta_glu	na	na	0	500	2		
-2.3057	beta_glu	na	na	0	650	2		
-0.4174	beta_glu	a	0	6		2		
-0.4631	beta_glu	a	1	6		2		
-0.4518	beta_glu	a	0	7		2		
-0.4449	beta_glu	a	1	7		2		
-0.4459	beta_glu	a	0	8		2		
-0.4863	beta_glu	a	1	8		2		
-0.3267	beta_glu	a	0	9		2		
-0.3682	beta_glu	a	1	9		2		
-0.4299	beta_glu	a	0	10		2		
-0.473	beta_glu	a	1	10		2		
-0.1547	beta_glu	b	0	6		2		
-0.1309	beta_glu	b	1	6		2		
-0.1317	beta_glu	b	0	7		2		
-0.14	beta_glu	b	1	7		2		
-0.1382	beta_glu	b	0	8		2		
-0.1344	beta_glu	b	1	8		2		
-0.1194	beta_glu	b	0	9		2		
-0.1204	beta_glu	b	1	9		2		
-0.1459	beta_glu	b	0	10		2		
-0.1345	beta_glu	b	1	10		2		
-0.5032	beta_glu	a	0	11		2		
-0.4052	beta_glu	a	1	11		2		
-0.416	beta_glu	a	0	12		2		
-0.4088	beta_glu	a	1	12		2		
-0.493	beta_glu	a	0	13		2		
-0.4932	beta_glu	a	1	13		2		
-0.3831	beta_glu	a	0	14		2		
-0.4159	beta_glu	a	1	14		2		
-0.4343	beta_glu	a	0	15		2		
-0.6385	beta_glu	a	1	15		2		
-0.4176	beta_glu	a	0	16		2		
-0.444	beta_glu	a	1	16		2		
-0.3116	beta_glu	a	0	17		2		
-0.3012	beta_glu	a	1	17		2		
-0.4424	beta_glu	a	0	18		2		
-0.4203	beta_glu	a	1	18		2		
-0.4648	beta_glu	a	0	19		2		
-0.5298	beta_glu	a	1	19		2		
-0.1417	beta_glu	b	0	11		2		
-0.1432	beta_glu	b	1	11		2		
-0.1255	beta_glu	b	0	12		2		
-0.1382	beta_glu	b	1	12		2		
-0.1406	beta_glu	b	0	13		2		
-0.1297	beta_glu	b	1	13		2		
-0.1233	beta_glu	b	0	14		2		
-0.1345	beta_glu	b	1	14		2		
-0.1321	beta_glu	b	0	15		2		
-0.1336	beta_glu	b	1	15		2		
-0.1402	beta_glu	b	0	16		2		
-0.1365	beta_glu	b	1	16		2		
-0.1184	beta_glu	b	0	17		2		
-0.1248	beta_glu	b	1	17		2		
-0.1349	beta_glu	b	0	18		2		
-0.1303	beta_glu	b	1	18		2		
-0.1398	beta_glu	b	0	19		2		
-0.1534	beta_glu	b	1	19		2		
-0.0484	beta_glu	na	na	0	0	3		
-0.092	beta_glu	na	na	0	10	3		
-0.1259	beta_glu	na	na	0	25	3		
-0.2082	beta_glu	na	na	0	50	3		
-0.3523	beta_glu	na	na	0	100	3		
-0.6555	beta_glu	na	na	0	200	3		
-0.9367	beta_glu	na	na	0	300	3		
-1.5408	beta_glu	na	na	0	500	3		
-1.9565	beta_glu	na	na	0	650	3		
-0.4564	beta_glu	a	0	20		3		
-0.503	beta_glu	a	1	20		3		
-0.5257	beta_glu	a	0	21		3		
-0.5776	beta_glu	a	1	21		3		
-0.5357	beta_glu	a	0	22		3		
-0.4716	beta_glu	a	1	22		3		
-0.5408	beta_glu	a	0	23		3		
-0.3994	beta_glu	a	1	23		3		
-0.4927	beta_glu	a	0	24		3		
-0.5438	beta_glu	a	1	24		3		
-0.3485	beta_glu	a	0	25		3		
-0.3257	beta_glu	a	1	25		3		
-0.4833	beta_glu	a	0	26		3		
-0.5263	beta_glu	a	1	26		3		
-0.4977	beta_glu	a	0	27		3		
-0.401	beta_glu	a	1	27		3		
-0.5602	beta_glu	a	0	28		3		
-0.4108	beta_glu	a	1	28		3		
-0.4781	beta_glu	a	0	29		3		
-0.4839	beta_glu	a	1	29		3		
-0.473	beta_glu	a	0	30		3		
-0.4805	beta_glu	a	1	30		3		
-0.1364	beta_glu	b	0	20		3		
-0.1349	beta_glu	b	1	20		3		
-0.1419	beta_glu	b	0	21		3		
-0.1444	beta_glu	b	1	21		3		
-0.1419	beta_glu	b	0	22		3		
-0.13	beta_glu	b	1	22		3		
-0.1467	beta_glu	b	0	23		3		
-0.1197	beta_glu	b	1	23		3		
-0.1425	beta_glu	b	0	24		3		
-0.1471	beta_glu	b	1	24		3		
-0.1142	beta_glu	b	0	25		3		
-0.1153	beta_glu	b	1	25		3		
-0.144	beta_glu	b	0	26		3		
-0.1389	beta_glu	b	1	26		3		
-0.1373	beta_glu	b	0	27		3		
-0.1293	beta_glu	b	1	27		3		
-0.1413	beta_glu	b	0	28		3		
-0.1281	beta_glu	b	1	28		3		
-0.134	beta_glu	b	0	29		3		
-0.1421	beta_glu	b	1	29		3		
-0.1379	beta_glu	b	0	30		3		
-0.1337	beta_glu	b	1	30		3		
-0.3611	beta_glu	a	1	35		3		
-0.3242	beta_glu	a	0	35		3		
-0.3533	beta_glu	a	1	34		3		
-0.3638	beta_glu	a	0	34		3		
-0.2681	beta_glu	a	1	33		3		
-0.2768	beta_glu	a	0	33		3		
-0.3262	beta_glu	a	1	32		3		
-0.3644	beta_glu	a	0	32		3		
-0.3473	beta_glu	a	1	31		3		
-0.3849	beta_glu	a	0	31		3		
-0.3742	beta_glu	a	0	36		3		
-0.3585	beta_glu	a	1	36		3		
-0.3414	beta_glu	a	0	37		3		
-0.3564	beta_glu	a	1	37		3		
-0.3613	beta_glu	a	0	38		3		
-0.3505	beta_glu	a	1	38		3		
-0.3627	beta_glu	a	0	39		3		
-0.3245	beta_glu	a	1	39		3		
-0.4001	beta_glu	a	0	40		3		
-0.3472	beta_glu	a	1	40		3		
-0.1133	beta_glu	b	1	40		3		
-0.1138	beta_glu	b	0	40		3		
-0.1285	beta_glu	b	1	39		3		
-0.13	beta_glu	b	0	39		3		
-0.1279	beta_glu	b	1	38		3		
-0.106	beta_glu	b	0	38		3		
-0.1158	beta_glu	b	1	37		3		
-0.1202	beta_glu	b	0	37		3		
-0.1258	beta_glu	b	1	36		3		
-0.1288	beta_glu	b	0	36		3		
-0.1259	beta_glu	b	1	35		3		
-0.1366	beta_glu	b	0	35		3		
-0.1224	beta_glu	b	1	34		3		
-0.1201	beta_glu	b	0	34		3		
-0.1208	beta_glu	b	1	33		3		
-0.1174	beta_glu	b	0	33		3		
-0.1242	beta_glu	b	1	32		3		
-0.121	beta_glu	b	0	32		3		
-0.1234	beta_glu	b	1	31		3		
-0.1187	beta_glu	b	0	31		3		
-0.049	beta_glu	na	na	0	0	4		
-0.1006	beta_glu	na	na	0	10	4		
-0.1391	beta_glu	na	na	0	25	4		
-0.2378	beta_glu	na	na	0	50	4		
-0.405	beta_glu	na	na	0	100	4		
-0.7532	beta_glu	na	na	0	200	4		
-1.1137	beta_glu	na	na	0	300	4		
-1.7982	beta_glu	na	na	0	500	4		
-2.3325	beta_glu	na	na	0	650	4		
-0.2964	beta_glu	a	0	41		4		
-0.4046	beta_glu	a	1	41		4		
-0.4415	beta_glu	a	0	42		4		
-0.5205	beta_glu	a	1	42		4		
-0.4524	beta_glu	a	0	43		4		
-0.4154	beta_glu	a	1	43		4		
-0.4897	beta_glu	a	0	44		4		
-0.4899	beta_glu	a	1	44		4		
-0.4458	beta_glu	a	0	45		4		
-0.4974	beta_glu	a	1	45		4		
-0.5113	beta_glu	a	0	46		4		
-0.4736	beta_glu	a	1	46		4		
-0.4592	beta_glu	a	0	47		4		
-0.4895	beta_glu	a	1	47		4		
-0.4404	beta_glu	a	0	48		4		
-0.4433	beta_glu	a	1	48		4		
-0.2856	beta_glu	a	0	49		4		
-0.2949	beta_glu	a	1	49		4		
-0.3223	beta_glu	a	0	50		4		
-0.3277	beta_glu	a	1	50		4		
-0.328	beta_glu	a	0	51		4		
-0.3057	beta_glu	a	1	51		4		
-0.3048	beta_glu	a	0	52		4		
-0.311	beta_glu	a	1	52		4		
-0.2506	beta_glu	a	0	53		4		
-0.2922	beta_glu	a	1	53		4		
-0.2747	beta_glu	a	0	54		4		
-0.3038	beta_glu	a	1	54		4		
-0.2902	beta_glu	a	0	55		4		
-0.2939	beta_glu	a	1	55		4		
-0.3011	beta_glu	a	0	56		4		
-0.3108	beta_glu	a	1	56		4		
-0.2963	beta_glu	a	0	57		4		
-0.2931	beta_glu	a	1	57		4		
-0.2376	beta_glu	a	0	58		4		
-0.3008	beta_glu	a	1	58		4		
-0.3232	beta_glu	a	0	59		4		
-0.3153	beta_glu	a	1	59		4		
-0.2822	beta_glu	a	0	60		4		
-0.2876	beta_glu	a	1	60		4		
-0.1147	beta_glu	b	0	41		4		
-0.1284	beta_glu	b	1	41		4		
-0.1456	beta_glu	b	0	42		4		
-0.1346	beta_glu	b	1	42		4		
-0.1354	beta_glu	b	0	43		4		
-0.1329	beta_glu	b	1	43		4		
-0.1407	beta_glu	b	0	44		4		
-0.1475	beta_glu	b	1	44		4		
-0.1432	beta_glu	b	0	45		4		
-0.1481	beta_glu	b	1	45		4		
-0.141	beta_glu	b	0	46		4		
-0.1476	beta_glu	b	1	46		4		
-0.1606	beta_glu	b	0	47		4		
-0.1265	beta_glu	b	1	47		4		
-0.1705	beta_glu	b	0	48		4		
-0.1454	beta_glu	b	1	48		4		
-0.1143	beta_glu	b	0	49		4		
-0.1199	beta_glu	b	1	49		4		
-0.1213	beta_glu	b	0	50		4		
-0.1196	beta_glu	b	1	50		4		
-0.1198	beta_glu	b	0	51		4		
-0.1178	beta_glu	b	1	51		4		
-0.1207	beta_glu	b	0	52		4		
-0.1228	beta_glu	b	1	52		4		
-0.1146	beta_glu	b	0	53		4		
-0.1207	beta_glu	b	1	53		4		
-0.113	beta_glu	b	0	54		4		
-0.1032	beta_glu	b	1	54		4		
-0.1154	beta_glu	b	0	55		4		
-0.1185	beta_glu	b	1	55		4		
-0.1165	beta_glu	b	0	56		4		
-0.1183	beta_glu	b	1	56		4		
-0.1117	beta_glu	b	0	57		4		
-0.1204	beta_glu	b	1	57		4		
-0.1024	beta_glu	b	0	58		4		
-0.1116	beta_glu	b	1	58		4		
-0.1173	beta_glu	b	0	59		4		
-0.1144	beta_glu	b	1	59		4		
-0.1045	beta_glu	b	0	60		4		
-0.1087	beta_glu	b	1	60		4		
-0.0494	phospha	na	na	0	0	5		
-0.0966	phospha	na	na	0	10	5		
-0.1358	phospha	na	na	0	25	5		
-0.2264	phospha	na	na	0	50	5		
-0.392	phospha	na	na	0	100	5		
-0.7194	phospha	na	na	0	200	5		
-1.0475	phospha	na	na	0	300	5		
-1.7239	phospha	na	na	0	500	5		
-2.2734	phospha	na	na	0	650	5		
-0.866	phospha	a	0	1		5		
-0.9676	phospha	a	1	1		5		
-0.9951	phospha	a	0	2		5		
-1.0719	phospha	a	1	2		5		
-1.0214	phospha	a	0	3		5		
-0.9591	phospha	a	1	3		5		
-0.9471	phospha	a	0	4		5		
-1.0479	phospha	a	1	4		5		
-0.9441	phospha	a	0	5		5		
-1.0459	phospha	a	1	5		5		
-0.9481	phospha	a	0	6		5		
-1.1522	phospha	a	1	6		5		
-1.1729	phospha	a	0	7		5		
-1.1062	phospha	a	1	7		5		
-1.1531	phospha	a	0	8		5		
-1.1706	phospha	a	1	8		5		
-0.8649	phospha	a	0	9		5		
-0.916	phospha	a	1	9		5		
-0.939	phospha	a	0	10		5		
-1.1775	phospha	a	1	10		5		
-0.8243	phospha	a	0	11		5		
-1.0391	phospha	a	1	11		5		
-1.0551	phospha	a	0	12		5		
-0.975	phospha	a	1	12		5		
-1.0138	phospha	a	0	13		5		
-1.131	phospha	a	1	13		5		
-1.0183	phospha	a	0	14		5		
-0.9161	phospha	a	1	14		5		
-1.0288	phospha	a	0	15		5		
-1.0676	phospha	a	1	15		5		
-0.9885	phospha	a	0	16		5		
-1.0604	phospha	a	1	16		5		
-0.2012	phospha	b	0	1		5		
-0.2057	phospha	b	1	1		5		
-0.216	phospha	b	0	2		5		
-0.237	phospha	b	1	2		5		
-0.2598	phospha	b	0	3		5		
-0.1917	phospha	b	1	3		5		
-0.2179	phospha	b	0	4		5		
-0.1819	phospha	b	1	4		5		
-0.1876	phospha	b	0	5		5		
-0.2046	phospha	b	1	5		5		
-0.1835	phospha	b	0	6		5		
-0.1832	phospha	b	1	6		5		
-0.1725	phospha	b	0	7		5		
-0.197	phospha	b	1	7		5		
-0.2344	phospha	b	0	8		5		
-0.1843	phospha	b	1	8		5		
-0.1482	phospha	b	0	9		5		
-0.1524	phospha	b	1	9		5		
-0.16	phospha	b	0	10		5		
-0.1645	phospha	b	1	10		5		
-0.1448	phospha	b	0	11		5		
-0.1501	phospha	b	1	11		5		
-0.1423	phospha	b	0	12		5		
-0.1529	phospha	b	1	12		5		
-0.1742	phospha	b	0	13		5		
-0.1888	phospha	b	1	13		5		
-0.1804	phospha	b	0	14		5		
-0.1604	phospha	b	1	14		5		
-0.2078	phospha	b	0	15		5		
-0.1999	phospha	b	1	15		5		
-0.1828	phospha	b	0	16		5		
-0.1627	phospha	b	1	16		5		
-0.7763	phospha	a	0	17		5		
-0.8839	phospha	a	1	17		5		
-1.0476	phospha	a	0	18		5		
-1.0134	phospha	a	1	18		5		
-0.9898	phospha	a	0	19		5		
-1.1714	phospha	a	1	19		5		
-0.9681	phospha	a	0	20		5		
-1.1067	phospha	a	1	20		5		
-1.0655	phospha	a	0	21		5		
-1.2571	phospha	a	1	21		5		
-1.0675	phospha	a	0	22		5		
-1.0586	phospha	a	1	22		5		
-1.0498	phospha	a	0	23		5		
-0.8861	phospha	a	1	23		5		
-0.985	phospha	a	0	24		5		
-1.0802	phospha	a	1	24		5		
-0.238	phospha	b	0	17		5		
-0.2428	phospha	b	1	17		5		
-0.1876	phospha	b	0	18		5		
-0.1902	phospha	b	1	18		5		
-0.2046	phospha	b	0	19		5		
-0.1772	phospha	b	1	19		5		
-0.1738	phospha	b	0	20		5		
-0.2181	phospha	b	1	20		5		
-0.1883	phospha	b	0	21		5		
-0.1808	phospha	b	1	21		5		
-0.1777	phospha	b	0	22		5		
-0.1785	phospha	b	1	22		5		
-0.2205	phospha	b	0	23		5		
-0.1769	phospha	b	1	23		5		
-0.1386	phospha	b	0	24		5		
-0.1328	phospha	b	1	24		5		
-0.8495	phospha	a	0	25		5		
-0.7735	phospha	a	1	25		5		
-1.0269	phospha	a	0	26		5		
-1.1558	phospha	a	1	26		5		
-1.0511	phospha	a	0	27		5		
-0.7804	phospha	a	1	27		5		
-1.0635	phospha	a	0	28		5		
-0.9138	phospha	a	1	28		5		
-0.9181	phospha	a	0	29		5		
-1.0081	phospha	a	1	29		5		
-0.9147	phospha	a	0	30		5		
-0.9358	phospha	a	1	30		5		
-1.0528	phospha	a	0	31		5		
-0.7925	phospha	a	1	31		5		
-0.9827	phospha	a	0	32		5		
-0.897	phospha	a	1	32		5		
-0.8132	phospha	a	0	33		5		
-0.7796	phospha	a	1	33		5		
-0.968	phospha	a	0	34		5		
-0.914	phospha	a	1	34		5		
-0.9504	phospha	a	0	35		5		
-0.9653	phospha	a	1	35		5		
-0.9764	phospha	a	0	36		5		
-0.9653	phospha	a	1	36		5		
-1.1365	phospha	a	0	37		5		
-0.932	phospha	a	1	37		5		
-0.9073	phospha	a	0	38		5		
-0.8882	phospha	a	1	38		5		
-0.9737	phospha	a	0	39		5		
-0.8838	phospha	a	1	39		5		
-1.0836	phospha	a	0	40		5		
-0.9	phospha	a	1	40		5		
-0.1821	phospha	b	0	25		5		
-0.1934	phospha	b	1	25		5		
-0.2029	phospha	b	0	26		5		
-0.1864	phospha	b	1	26		5		
-0.2396	phospha	b	0	27		5		
-0.1873	phospha	b	1	27		5		
-0.1976	phospha	b	0	28		5		
-0.2237	phospha	b	1	28		5		
-0.2336	phospha	b	0	29		5		
-0.1855	phospha	b	1	29		5		
-0.269	phospha	b	0	30		5		
-0.1871	phospha	b	1	30		5		
-0.2227	phospha	b	0	31		5		
-0.2307	phospha	b	1	31		5		
-0.236	phospha	b	0	32		5		
-0.2412	phospha	b	1	32		5		
-0.1973	phospha	b	0	33		5		
-0.1895	phospha	b	1	33		5		
-0.1677	phospha	b	0	34		5		
-0.1748	phospha	b	1	34		5		
-0.1631	phospha	b	0	35		5		
-0.1483	phospha	b	1	35		5		
-0.1615	phospha	b	0	36		5		
-0.1677	phospha	b	1	36		5		
-0.2452	phospha	b	0	37		5		
-0.1659	phospha	b	1	37		5		
-0.198	phospha	b	0	38		5		
-0.1708	phospha	b	1	38		5		
-0.1339	phospha	b	0	39		5		
-0.1294	phospha	b	1	39		5		
-0.151	phospha	b	0	40		5		
-0.1241	phospha	b	1	40		5		
-0.0528	phospha	na	na	0	0	6		
-0.0977	phospha	na	na	0	10	6		
-0.1352	phospha	na	na	0	25	6		
-0.2398	phospha	na	na	0	50	6		
-0.3809	phospha	na	na	0	100	6		
-0.6973	phospha	na	na	0	200	6		
-1.0425	phospha	na	na	0	300	6		
-1.7023	phospha	na	na	0	500	6		
-2.3287	phospha	na	na	0	650	6		
-0.7838	phospha	a	1	41		6		
-0.8839	phospha	a	0	41		6		
-0.993	phospha	a	1	42		6		
-0.995	phospha	a	0	42		6		
-1.1602	phospha	a	1	43		6		
-0.8891	phospha	a	0	43		6		
-1.1468	phospha	a	1	44		6		
-1.0286	phospha	a	0	44		6		
-1.0144	phospha	a	1	45		6		
-1.016	phospha	a	0	45		6		
-1.057	phospha	a	1	46		6		
-1.0199	phospha	a	0	46		6		
-1.0864	phospha	a	1	47		6		
-1.0287	phospha	a	0	47		6		
-1.0282	phospha	a	1	48		6		
-0.9239	phospha	a	0	48		6		
-0.7757	phospha	a	1	49		6		
-0.8069	phospha	a	0	49		6		
-0.7843	phospha	a	1	50		6		
-0.7901	phospha	a	0	50		6		
-0.6982	phospha	a	1	51		6		
-0.8388	phospha	a	0	51		6		
-0.8267	phospha	a	1	52		6		
-0.8041	phospha	a	0	52		6		
-0.1636	phospha	b	1	41		6		
-0.1928	phospha	b	0	41		6		
-0.1727	phospha	b	1	42		6		
-0.1686	phospha	b	0	42		6		
-0.1848	phospha	b	1	43		6		
-0.1692	phospha	b	0	43		6		
-0.1772	phospha	b	1	44		6		
-0.1581	phospha	b	0	44		6		
-0.18	phospha	b	1	45		6		
-0.1769	phospha	b	0	45		6		
-0.1763	phospha	b	1	46		6		
-0.1805	phospha	b	0	46		6		
-0.1903	phospha	b	1	47		6		
-0.2061	phospha	b	0	47		6		
-0.1786	phospha	b	1	48		6		
-0.1732	phospha	b	0	48		6		
-0.1829	phospha	b	1	49		6		
-0.1804	phospha	b	0	49		6		
-0.1346	phospha	b	1	50		6		
-0.1313	phospha	b	0	50		6		
-0.1466	phospha	b	1	51		6		
-0.1631	phospha	b	0	51		6		
-0.1247	phospha	b	1	52		6		
-0.1256	phospha	b	0	52		6		
-0.8192	phospha	a	1	53		6		
-0.8456	phospha	a	0	53		6		
-0.7751	phospha	a	1	54		6		
-0.8484	phospha	a	0	54		6		
-0.8772	phospha	a	1	55		6		
-0.9172	phospha	a	0	55		6		
-0.8213	phospha	a	1	56		6		
-0.8644	phospha	a	0	56		6		
-0.756	phospha	a	1	57		6		
-0.8524	phospha	a	0	57		6		
-0.7739	phospha	a	1	58		6		
-0.8945	phospha	a	0	58		6		
-0.9202	phospha	a	1	59		6		
-0.9802	phospha	a	0	59		6		
-0.8755	phospha	a	1	60		6		
-0.8515	phospha	a	0	60		6		
-0.1792	phospha	b	1	53		6		
-0.1742	phospha	b	0	53		6		
-0.1625	phospha	b	1	54		6		
-0.1544	phospha	b	0	54		6		
-0.1642	phospha	b	1	55		6		
-0.1638	phospha	b	0	55		6		
-0.1662	phospha	b	1	56		6		
-0.1359	phospha	b	0	56		6		
-0.1454	phospha	b	1	57		6		
-0.1733	phospha	b	0	57		6		
-0.1861	phospha	b	1	58		6		
-0.1448	phospha	b	0	58		6		
-0.1483	phospha	b	1	59		6		
-0.127	phospha	b	0	59		6		
-0.1213	phospha	b	1	60		6		
-0.12	phospha	b	0	60		6		
- 								
-								
-								
-								
-								
-								
-								
+Abs	enz	sample	nitrogen	plot	cali_cons	cali_group
+0.0528	beta_glu	cali	na	0	0	1
+0.1005	beta_glu	cali	na	0	10	1
+0.1479	beta_glu	cali	na	0	25	1
+0.237	beta_glu	cali	na	0	50	1
+0.4092	beta_glu	cali	na	0	100	1
+0.7726	beta_glu	cali	na	0	200	1
+1.0983	beta_glu	cali	na	0	300	1
+1.8162	beta_glu	cali	na	0	500	1
+2.4602	beta_glu	cali	na	0	650	1
+0.6232	beta_glu	a	0	1		1
+0.6115	beta_glu	a	1	1		1
+0.7257	beta_glu	a	0	2		1
+0.6695	beta_glu	a	1	2		1
+0.6154	beta_glu	a	0	3		1
+0.4727	beta_glu	a	1	3		1
+1.0749	beta_glu	a	0	4		1
+0.5586	beta_glu	a	1	4		1
+0.5018	beta_glu	a	0	5		1
+0.4996	beta_glu	a	1	5		1
+0.3698	beta_glu	b	0	1		1
+0.3964	beta_glu	b	1	1		1
+0.499	beta_glu	b	0	2		1
+0.5393	beta_glu	b	1	2		1
+0.4478	beta_glu	b	0	3		1
+0.4561	beta_glu	b	1	3		1
+0.7064	beta_glu	b	0	4		1
+0.5002	beta_glu	b	1	4		1
+0.4426	beta_glu	b	0	5		1
+0.4551	beta_glu	b	1	5		1
+0.0485	beta_glu	na	na	0	0	2
+0.098	beta_glu	na	na	0	10	2
+0.1373	beta_glu	na	na	0	25	2
+0.2349	beta_glu	na	na	0	50	2
+0.392	beta_glu	na	na	0	100	2
+0.7332	beta_glu	na	na	0	200	2
+1.0466	beta_glu	na	na	0	300	2
+1.7238	beta_glu	na	na	0	500	2
+2.3057	beta_glu	na	na	0	650	2
+0.4174	beta_glu	a	0	6		2
+0.4631	beta_glu	a	1	6		2
+0.4518	beta_glu	a	0	7		2
+0.4449	beta_glu	a	1	7		2
+0.4459	beta_glu	a	0	8		2
+0.4863	beta_glu	a	1	8		2
+0.3267	beta_glu	a	0	9		2
+0.3682	beta_glu	a	1	9		2
+0.4299	beta_glu	a	0	10		2
+0.473	beta_glu	a	1	10		2
+0.1547	beta_glu	b	0	6		2
+0.1309	beta_glu	b	1	6		2
+0.1317	beta_glu	b	0	7		2
+0.14	beta_glu	b	1	7		2
+0.1382	beta_glu	b	0	8		2
+0.1344	beta_glu	b	1	8		2
+0.1194	beta_glu	b	0	9		2
+0.1204	beta_glu	b	1	9		2
+0.1459	beta_glu	b	0	10		2
+0.1345	beta_glu	b	1	10		2
+0.5032	beta_glu	a	0	11		2
+0.4052	beta_glu	a	1	11		2
+0.416	beta_glu	a	0	12		2
+0.4088	beta_glu	a	1	12		2
+0.493	beta_glu	a	0	13		2
+0.4932	beta_glu	a	1	13		2
+0.3831	beta_glu	a	0	14		2
+0.4159	beta_glu	a	1	14		2
+0.4343	beta_glu	a	0	15		2
+0.6385	beta_glu	a	1	15		2
+0.4176	beta_glu	a	0	16		2
+0.444	beta_glu	a	1	16		2
+0.3116	beta_glu	a	0	17		2
+0.3012	beta_glu	a	1	17		2
+0.4424	beta_glu	a	0	18		2
+0.4203	beta_glu	a	1	18		2
+0.4648	beta_glu	a	0	19		2
+0.5298	beta_glu	a	1	19		2
+0.1417	beta_glu	b	0	11		2
+0.1432	beta_glu	b	1	11		2
+0.1255	beta_glu	b	0	12		2
+0.1382	beta_glu	b	1	12		2
+0.1406	beta_glu	b	0	13		2
+0.1297	beta_glu	b	1	13		2
+0.1233	beta_glu	b	0	14		2
+0.1345	beta_glu	b	1	14		2
+0.1321	beta_glu	b	0	15		2
+0.1336	beta_glu	b	1	15		2
+0.1402	beta_glu	b	0	16		2
+0.1365	beta_glu	b	1	16		2
+0.1184	beta_glu	b	0	17		2
+0.1248	beta_glu	b	1	17		2
+0.1349	beta_glu	b	0	18		2
+0.1303	beta_glu	b	1	18		2
+0.1398	beta_glu	b	0	19		2
+0.1534	beta_glu	b	1	19		2
+0.0484	beta_glu	na	na	0	0	3
+0.092	beta_glu	na	na	0	10	3
+0.1259	beta_glu	na	na	0	25	3
+0.2082	beta_glu	na	na	0	50	3
+0.3523	beta_glu	na	na	0	100	3
+0.6555	beta_glu	na	na	0	200	3
+0.9367	beta_glu	na	na	0	300	3
+1.5408	beta_glu	na	na	0	500	3
+1.9565	beta_glu	na	na	0	650	3
+0.4564	beta_glu	a	0	20		3
+0.503	beta_glu	a	1	20		3
+0.5257	beta_glu	a	0	21		3
+0.5776	beta_glu	a	1	21		3
+0.5357	beta_glu	a	0	22		3
+0.4716	beta_glu	a	1	22		3
+0.5408	beta_glu	a	0	23		3
+0.3994	beta_glu	a	1	23		3
+0.4927	beta_glu	a	0	24		3
+0.5438	beta_glu	a	1	24		3
+0.3485	beta_glu	a	0	25		3
+0.3257	beta_glu	a	1	25		3
+0.4833	beta_glu	a	0	26		3
+0.5263	beta_glu	a	1	26		3
+0.4977	beta_glu	a	0	27		3
+0.401	beta_glu	a	1	27		3
+0.5602	beta_glu	a	0	28		3
+0.4108	beta_glu	a	1	28		3
+0.4781	beta_glu	a	0	29		3
+0.4839	beta_glu	a	1	29		3
+0.473	beta_glu	a	0	30		3
+0.4805	beta_glu	a	1	30		3
+0.1364	beta_glu	b	0	20		3
+0.1349	beta_glu	b	1	20		3
+0.1419	beta_glu	b	0	21		3
+0.1444	beta_glu	b	1	21		3
+0.1419	beta_glu	b	0	22		3
+0.13	beta_glu	b	1	22		3
+0.1467	beta_glu	b	0	23		3
+0.1197	beta_glu	b	1	23		3
+0.1425	beta_glu	b	0	24		3
+0.1471	beta_glu	b	1	24		3
+0.1142	beta_glu	b	0	25		3
+0.1153	beta_glu	b	1	25		3
+0.144	beta_glu	b	0	26		3
+0.1389	beta_glu	b	1	26		3
+0.1373	beta_glu	b	0	27		3
+0.1293	beta_glu	b	1	27		3
+0.1413	beta_glu	b	0	28		3
+0.1281	beta_glu	b	1	28		3
+0.134	beta_glu	b	0	29		3
+0.1421	beta_glu	b	1	29		3
+0.1379	beta_glu	b	0	30		3
+0.1337	beta_glu	b	1	30		3
+0.3611	beta_glu	a	1	35		3
+0.3242	beta_glu	a	0	35		3
+0.3533	beta_glu	a	1	34		3
+0.3638	beta_glu	a	0	34		3
+0.2681	beta_glu	a	1	33		3
+0.2768	beta_glu	a	0	33		3
+0.3262	beta_glu	a	1	32		3
+0.3644	beta_glu	a	0	32		3
+0.3473	beta_glu	a	1	31		3
+0.3849	beta_glu	a	0	31		3
+0.3742	beta_glu	a	0	36		3
+0.3585	beta_glu	a	1	36		3
+0.3414	beta_glu	a	0	37		3
+0.3564	beta_glu	a	1	37		3
+0.3613	beta_glu	a	0	38		3
+0.3505	beta_glu	a	1	38		3
+0.3627	beta_glu	a	0	39		3
+0.3245	beta_glu	a	1	39		3
+0.4001	beta_glu	a	0	40		3
+0.3472	beta_glu	a	1	40		3
+0.1133	beta_glu	b	1	40		3
+0.1138	beta_glu	b	0	40		3
+0.1285	beta_glu	b	1	39		3
+0.13	beta_glu	b	0	39		3
+0.1279	beta_glu	b	1	38		3
+0.106	beta_glu	b	0	38		3
+0.1158	beta_glu	b	1	37		3
+0.1202	beta_glu	b	0	37		3
+0.1258	beta_glu	b	1	36		3
+0.1288	beta_glu	b	0	36		3
+0.1259	beta_glu	b	1	35		3
+0.1366	beta_glu	b	0	35		3
+0.1224	beta_glu	b	1	34		3
+0.1201	beta_glu	b	0	34		3
+0.1208	beta_glu	b	1	33		3
+0.1174	beta_glu	b	0	33		3
+0.1242	beta_glu	b	1	32		3
+0.121	beta_glu	b	0	32		3
+0.1234	beta_glu	b	1	31		3
+0.1187	beta_glu	b	0	31		3
+0.049	beta_glu	cali	na	0	0	4
+0.1006	beta_glu	cali	na	0	10	4
+0.1391	beta_glu	cali	na	0	25	4
+0.2378	beta_glu	cali	na	0	50	4
+0.405	beta_glu	cali	na	0	100	4
+0.7532	beta_glu	cali	na	0	200	4
+1.1137	beta_glu	cali	na	0	300	4
+1.7982	beta_glu	cali	na	0	500	4
+2.3325	beta_glu	cali	na	0	650	4
+0.2964	beta_glu	a	0	41		4
+0.4046	beta_glu	a	1	41		4
+0.4415	beta_glu	a	0	42		4
+0.5205	beta_glu	a	1	42		4
+0.4524	beta_glu	a	0	43		4
+0.4154	beta_glu	a	1	43		4
+0.4897	beta_glu	a	0	44		4
+0.4899	beta_glu	a	1	44		4
+0.4458	beta_glu	a	0	45		4
+0.4974	beta_glu	a	1	45		4
+0.5113	beta_glu	a	0	46		4
+0.4736	beta_glu	a	1	46		4
+0.4592	beta_glu	a	0	47		4
+0.4895	beta_glu	a	1	47		4
+0.4404	beta_glu	a	0	48		4
+0.4433	beta_glu	a	1	48		4
+0.2856	beta_glu	a	0	49		4
+0.2949	beta_glu	a	1	49		4
+0.3223	beta_glu	a	0	50		4
+0.3277	beta_glu	a	1	50		4
+0.328	beta_glu	a	0	51		4
+0.3057	beta_glu	a	1	51		4
+0.3048	beta_glu	a	0	52		4
+0.311	beta_glu	a	1	52		4
+0.2506	beta_glu	a	0	53		4
+0.2922	beta_glu	a	1	53		4
+0.2747	beta_glu	a	0	54		4
+0.3038	beta_glu	a	1	54		4
+0.2902	beta_glu	a	0	55		4
+0.2939	beta_glu	a	1	55		4
+0.3011	beta_glu	a	0	56		4
+0.3108	beta_glu	a	1	56		4
+0.2963	beta_glu	a	0	57		4
+0.2931	beta_glu	a	1	57		4
+0.2376	beta_glu	a	0	58		4
+0.3008	beta_glu	a	1	58		4
+0.3232	beta_glu	a	0	59		4
+0.3153	beta_glu	a	1	59		4
+0.2822	beta_glu	a	0	60		4
+0.2876	beta_glu	a	1	60		4
+0.1147	beta_glu	b	0	41		4
+0.1284	beta_glu	b	1	41		4
+0.1456	beta_glu	b	0	42		4
+0.1346	beta_glu	b	1	42		4
+0.1354	beta_glu	b	0	43		4
+0.1329	beta_glu	b	1	43		4
+0.1407	beta_glu	b	0	44		4
+0.1475	beta_glu	b	1	44		4
+0.1432	beta_glu	b	0	45		4
+0.1481	beta_glu	b	1	45		4
+0.141	beta_glu	b	0	46		4
+0.1476	beta_glu	b	1	46		4
+0.1606	beta_glu	b	0	47		4
+0.1265	beta_glu	b	1	47		4
+0.1705	beta_glu	b	0	48		4
+0.1454	beta_glu	b	1	48		4
+0.1143	beta_glu	b	0	49		4
+0.1199	beta_glu	b	1	49		4
+0.1213	beta_glu	b	0	50		4
+0.1196	beta_glu	b	1	50		4
+0.1198	beta_glu	b	0	51		4
+0.1178	beta_glu	b	1	51		4
+0.1207	beta_glu	b	0	52		4
+0.1228	beta_glu	b	1	52		4
+0.1146	beta_glu	b	0	53		4
+0.1207	beta_glu	b	1	53		4
+0.113	beta_glu	b	0	54		4
+0.1032	beta_glu	b	1	54		4
+0.1154	beta_glu	b	0	55		4
+0.1185	beta_glu	b	1	55		4
+0.1165	beta_glu	b	0	56		4
+0.1183	beta_glu	b	1	56		4
+0.1117	beta_glu	b	0	57		4
+0.1204	beta_glu	b	1	57		4
+0.1024	beta_glu	b	0	58		4
+0.1116	beta_glu	b	1	58		4
+0.1173	beta_glu	b	0	59		4
+0.1144	beta_glu	b	1	59		4
+0.1045	beta_glu	b	0	60		4
+0.1087	beta_glu	b	1	60		4
+0.0494	phospha	cali	na	0	0	5
+0.0966	phospha	cali	na	0	10	5
+0.1358	phospha	cali	na	0	25	5
+0.2264	phospha	cali	na	0	50	5
+0.392	phospha	cali	na	0	100	5
+0.7194	phospha	cali	na	0	200	5
+1.0475	phospha	cali	na	0	300	5
+1.7239	phospha	cali	na	0	500	5
+2.2734	phospha	cali	na	0	650	5
+0.866	phospha	a	0	1		5
+0.9676	phospha	a	1	1		5
+0.9951	phospha	a	0	2		5
+1.0719	phospha	a	1	2		5
+1.0214	phospha	a	0	3		5
+0.9591	phospha	a	1	3		5
+0.9471	phospha	a	0	4		5
+1.0479	phospha	a	1	4		5
+0.9441	phospha	a	0	5		5
+1.0459	phospha	a	1	5		5
+0.9481	phospha	a	0	6		5
+1.1522	phospha	a	1	6		5
+1.1729	phospha	a	0	7		5
+1.1062	phospha	a	1	7		5
+1.1531	phospha	a	0	8		5
+1.1706	phospha	a	1	8		5
+0.8649	phospha	a	0	9		5
+0.916	phospha	a	1	9		5
+0.939	phospha	a	0	10		5
+1.1775	phospha	a	1	10		5
+0.8243	phospha	a	0	11		5
+1.0391	phospha	a	1	11		5
+1.0551	phospha	a	0	12		5
+0.975	phospha	a	1	12		5
+1.0138	phospha	a	0	13		5
+1.131	phospha	a	1	13		5
+1.0183	phospha	a	0	14		5
+0.9161	phospha	a	1	14		5
+1.0288	phospha	a	0	15		5
+1.0676	phospha	a	1	15		5
+0.9885	phospha	a	0	16		5
+1.0604	phospha	a	1	16		5
+0.2012	phospha	b	0	1		5
+0.2057	phospha	b	1	1		5
+0.216	phospha	b	0	2		5
+0.237	phospha	b	1	2		5
+0.2598	phospha	b	0	3		5
+0.1917	phospha	b	1	3		5
+0.2179	phospha	b	0	4		5
+0.1819	phospha	b	1	4		5
+0.1876	phospha	b	0	5		5
+0.2046	phospha	b	1	5		5
+0.1835	phospha	b	0	6		5
+0.1832	phospha	b	1	6		5
+0.1725	phospha	b	0	7		5
+0.197	phospha	b	1	7		5
+0.2344	phospha	b	0	8		5
+0.1843	phospha	b	1	8		5
+0.1482	phospha	b	0	9		5
+0.1524	phospha	b	1	9		5
+0.16	phospha	b	0	10		5
+0.1645	phospha	b	1	10		5
+0.1448	phospha	b	0	11		5
+0.1501	phospha	b	1	11		5
+0.1423	phospha	b	0	12		5
+0.1529	phospha	b	1	12		5
+0.1742	phospha	b	0	13		5
+0.1888	phospha	b	1	13		5
+0.1804	phospha	b	0	14		5
+0.1604	phospha	b	1	14		5
+0.2078	phospha	b	0	15		5
+0.1999	phospha	b	1	15		5
+0.1828	phospha	b	0	16		5
+0.1627	phospha	b	1	16		5
+0.7763	phospha	a	0	17		5
+0.8839	phospha	a	1	17		5
+1.0476	phospha	a	0	18		5
+1.0134	phospha	a	1	18		5
+0.9898	phospha	a	0	19		5
+1.1714	phospha	a	1	19		5
+0.9681	phospha	a	0	20		5
+1.1067	phospha	a	1	20		5
+1.0655	phospha	a	0	21		5
+1.2571	phospha	a	1	21		5
+1.0675	phospha	a	0	22		5
+1.0586	phospha	a	1	22		5
+1.0498	phospha	a	0	23		5
+0.8861	phospha	a	1	23		5
+0.985	phospha	a	0	24		5
+1.0802	phospha	a	1	24		5
+0.238	phospha	b	0	17		5
+0.2428	phospha	b	1	17		5
+0.1876	phospha	b	0	18		5
+0.1902	phospha	b	1	18		5
+0.2046	phospha	b	0	19		5
+0.1772	phospha	b	1	19		5
+0.1738	phospha	b	0	20		5
+0.2181	phospha	b	1	20		5
+0.1883	phospha	b	0	21		5
+0.1808	phospha	b	1	21		5
+0.1777	phospha	b	0	22		5
+0.1785	phospha	b	1	22		5
+0.2205	phospha	b	0	23		5
+0.1769	phospha	b	1	23		5
+0.1386	phospha	b	0	24		5
+0.1328	phospha	b	1	24		5
+0.8495	phospha	a	0	25		5
+0.7735	phospha	a	1	25		5
+1.0269	phospha	a	0	26		5
+1.1558	phospha	a	1	26		5
+1.0511	phospha	a	0	27		5
+0.7804	phospha	a	1	27		5
+1.0635	phospha	a	0	28		5
+0.9138	phospha	a	1	28		5
+0.9181	phospha	a	0	29		5
+1.0081	phospha	a	1	29		5
+0.9147	phospha	a	0	30		5
+0.9358	phospha	a	1	30		5
+1.0528	phospha	a	0	31		5
+0.7925	phospha	a	1	31		5
+0.9827	phospha	a	0	32		5
+0.897	phospha	a	1	32		5
+0.8132	phospha	a	0	33		5
+0.7796	phospha	a	1	33		5
+0.968	phospha	a	0	34		5
+0.914	phospha	a	1	34		5
+0.9504	phospha	a	0	35		5
+0.9653	phospha	a	1	35		5
+0.9764	phospha	a	0	36		5
+0.9653	phospha	a	1	36		5
+1.1365	phospha	a	0	37		5
+0.932	phospha	a	1	37		5
+0.9073	phospha	a	0	38		5
+0.8882	phospha	a	1	38		5
+0.9737	phospha	a	0	39		5
+0.8838	phospha	a	1	39		5
+1.0836	phospha	a	0	40		5
+0.9	phospha	a	1	40		5
+0.1821	phospha	b	0	25		5
+0.1934	phospha	b	1	25		5
+0.2029	phospha	b	0	26		5
+0.1864	phospha	b	1	26		5
+0.2396	phospha	b	0	27		5
+0.1873	phospha	b	1	27		5
+0.1976	phospha	b	0	28		5
+0.2237	phospha	b	1	28		5
+0.2336	phospha	b	0	29		5
+0.1855	phospha	b	1	29		5
+0.269	phospha	b	0	30		5
+0.1871	phospha	b	1	30		5
+0.2227	phospha	b	0	31		5
+0.2307	phospha	b	1	31		5
+0.236	phospha	b	0	32		5
+0.2412	phospha	b	1	32		5
+0.1973	phospha	b	0	33		5
+0.1895	phospha	b	1	33		5
+0.1677	phospha	b	0	34		5
+0.1748	phospha	b	1	34		5
+0.1631	phospha	b	0	35		5
+0.1483	phospha	b	1	35		5
+0.1615	phospha	b	0	36		5
+0.1677	phospha	b	1	36		5
+0.2452	phospha	b	0	37		5
+0.1659	phospha	b	1	37		5
+0.198	phospha	b	0	38		5
+0.1708	phospha	b	1	38		5
+0.1339	phospha	b	0	39		5
+0.1294	phospha	b	1	39		5
+0.151	phospha	b	0	40		5
+0.1241	phospha	b	1	40		5
+0.0528	phospha	cali	na	0	0	6
+0.0977	phospha	cali	na	0	10	6
+0.1352	phospha	cali	na	0	25	6
+0.2398	phospha	cali	na	0	50	6
+0.3809	phospha	cali	na	0	100	6
+0.6973	phospha	cali	na	0	200	6
+1.0425	phospha	cali	na	0	300	6
+1.7023	phospha	cali	na	0	500	6
+2.3287	phospha	cali	na	0	650	6
+0.7838	phospha	a	1	41		6
+0.8839	phospha	a	0	41		6
+0.993	phospha	a	1	42		6
+0.995	phospha	a	0	42		6
+1.1602	phospha	a	1	43		6
+0.8891	phospha	a	0	43		6
+1.1468	phospha	a	1	44		6
+1.0286	phospha	a	0	44		6
+1.0144	phospha	a	1	45		6
+1.016	phospha	a	0	45		6
+1.057	phospha	a	1	46		6
+1.0199	phospha	a	0	46		6
+1.0864	phospha	a	1	47		6
+1.0287	phospha	a	0	47		6
+1.0282	phospha	a	1	48		6
+0.9239	phospha	a	0	48		6
+0.7757	phospha	a	1	49		6
+0.8069	phospha	a	0	49		6
+0.7843	phospha	a	1	50		6
+0.7901	phospha	a	0	50		6
+0.6982	phospha	a	1	51		6
+0.8388	phospha	a	0	51		6
+0.8267	phospha	a	1	52		6
+0.8041	phospha	a	0	52		6
+0.1636	phospha	b	1	41		6
+0.1928	phospha	b	0	41		6
+0.1727	phospha	b	1	42		6
+0.1686	phospha	b	0	42		6
+0.1848	phospha	b	1	43		6
+0.1692	phospha	b	0	43		6
+0.1772	phospha	b	1	44		6
+0.1581	phospha	b	0	44		6
+0.18	phospha	b	1	45		6
+0.1769	phospha	b	0	45		6
+0.1763	phospha	b	1	46		6
+0.1805	phospha	b	0	46		6
+0.1903	phospha	b	1	47		6
+0.2061	phospha	b	0	47		6
+0.1786	phospha	b	1	48		6
+0.1732	phospha	b	0	48		6
+0.1829	phospha	b	1	49		6
+0.1804	phospha	b	0	49		6
+0.1346	phospha	b	1	50		6
+0.1313	phospha	b	0	50		6
+0.1466	phospha	b	1	51		6
+0.1631	phospha	b	0	51		6
+0.1247	phospha	b	1	52		6
+0.1256	phospha	b	0	52		6
+0.8192	phospha	a	1	53		6
+0.8456	phospha	a	0	53		6
+0.7751	phospha	a	1	54		6
+0.8484	phospha	a	0	54		6
+0.8772	phospha	a	1	55		6
+0.9172	phospha	a	0	55		6
+0.8213	phospha	a	1	56		6
+0.8644	phospha	a	0	56		6
+0.756	phospha	a	1	57		6
+0.8524	phospha	a	0	57		6
+0.7739	phospha	a	1	58		6
+0.8945	phospha	a	0	58		6
+0.9202	phospha	a	1	59		6
+0.9802	phospha	a	0	59		6
+0.8755	phospha	a	1	60		6
+0.8515	phospha	a	0	60		6
+0.1792	phospha	b	1	53		6
+0.1742	phospha	b	0	53		6
+0.1625	phospha	b	1	54		6
+0.1544	phospha	b	0	54		6
+0.1642	phospha	b	1	55		6
+0.1638	phospha	b	0	55		6
+0.1662	phospha	b	1	56		6
+0.1359	phospha	b	0	56		6
+0.1454	phospha	b	1	57		6
+0.1733	phospha	b	0	57		6
+0.1861	phospha	b	1	58		6
+0.1448	phospha	b	0	58		6
+0.1483	phospha	b	1	59		6
+0.127	phospha	b	0	59		6
+0.1213	phospha	b	1	60		6
+0.12	phospha	b	0	60		6
+ 						
+						
+						
+						
+						
+						
+						

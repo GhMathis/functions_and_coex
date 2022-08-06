@@ -7,7 +7,7 @@ library(lmerTest)
 library(ade4)
 library(partR2)
 library(tidyverse)
-
+#Sjplot
 localDir="~/Fac/Cesure2/Plant_species_coexistence/functions_and_coex/"
 setwd(localDir)
 
@@ -28,7 +28,7 @@ biomass_data = traits_shift_data[traits_shift_data$trait == "biomass",]
 hist(biomass_data$CWM,breaks =48 )
 hist(biomass_data$delta_ab_shift,breaks =48 )
 hist(biomass_data$delta_intra_shift,breaks =48 )
-mod_CWM_bioma <- lm(formula = CWM ~ Omega + 
+mod_CWM_bioma <- lm(formula = biomasse ~ Omega + 
                 feasibility + 
                 indirect_effects +
                 log(year_extinction), data = biomass_data)
