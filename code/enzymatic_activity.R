@@ -19,6 +19,7 @@ enz_act$cali_group = as.factor(enz_act$cali_group)
 lm_cali = data.frame()
 data_cali = subset(enz_act, sample == "cali")
 str(data_cali)
+### 6 calibration (use with there corresponding absorbence data after)
 for (n_cali in 1:6){
   print(n_cali)
   temp = subset(data_cali, cali_group == n_cali)
@@ -29,12 +30,13 @@ for (n_cali in 1:6){
 
 data = subset(enz_act, sample != "cali")
 
+### compute the nytrophnol concentration
 for (n_abs in 1:nrow(data)){
     n_cali=enz_act$cali_group[n_abs]
     data$cali_cons[n_abs]=lm_cali[n_cali,2]*enz_act$Abs[n_abs]+lm_cali[n_cali,1]
   
 }
-
+rm(test)
 str(lm_cali)
 plot(lm_cali[[1]])
 str(data)

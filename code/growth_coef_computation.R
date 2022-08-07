@@ -27,14 +27,14 @@ par_height_long = par_height%>%
   pivot_longer(cols= c("heigth_A", "heigth_B", "heigth_C", "heigth_D"),
                names_to = "heights_spot",values_to = "height")
 
-ggplot(subset(par_height_long, par_height_long$nitrogen == "0" ))+
+ggplot(subset(par_height_long, par_height_long$treatment == "control" ))+
   geom_point(aes(time, height))+
   geom_point(aes(time, mean_height), col ="red")+
   geom_smooth(aes(time, height),formula = y ~ poly(x, 2), method = "lm",
               se=F, linetype = 2, size = 0.5)+
 
   facet_wrap(~plot)
-ggplot(subset(par_height_long, par_height_long$nitrogen == "1" ))+
+ggplot(subset(par_height_long, par_height_long$treatment == "nitrogen" ))+
   geom_point(aes(time, height))+
   geom_point(aes(time, mean_height), col ="red")+
   geom_smooth(aes(time, height),formula = y ~ poly(x, 2), method = "lm",
@@ -56,8 +56,8 @@ coef_df = matrix(ncol = 5, nrow = max(par_height$plot)*2)
 
 for (n_plot in 1:max(par_height$plot)){
   
-  tabl_control = par_height[par_height$plot == n_plot & par_height$nitrogen == 0,]
-  tabl_nitro = par_height[par_height$plot == n_plot & par_height$nitrogen == 1,]
+  tabl_control = par_height[par_height$plot == n_plot & par_height$treatment == "control",]
+  tabl_nitro = par_height[par_height$plot == n_plot & par_height$treatment == "nitrogen",]
   
   
   model_control = lm(formula = formula , data = tabl_control)
@@ -66,11 +66,11 @@ for (n_plot in 1:max(par_height$plot)){
   canopy_list_models <- append(canopy_list_models,
                                lapply(n_plot, function(x) list( model_control, model_nitro) ))
   
-  coef_df[2*n_plot-1,] = c(model_control$coefficients,0, n_plot )
-  coef_df[2*n_plot,] = c(model_nitro$coefficients,1,n_plot )
+  coef_df[2*n_plot-1,] = c(model_control$coefficients, 0, n_plot )
+  coef_df[2*n_plot,] = c(model_nitro$coefficients, 1,n_plot )
 }
 
-names(coef_df) = c("intercept", "coef1", "coef2", "nitrogen", "plot")
+#names(coef_df) = c("intercept", "coef1", "coef2", "treatment", "plot")
 
 ### to match the row of "par_height", for after calculate predictions at each 
 # measurement time
@@ -91,6 +91,8 @@ pred=c()
 i=1
 ### pred = [1,time,time2] %*% t([intecept, coef1, coef2])
 # (time2 == time²)
+predict(canopy_list_models[[1]][[1]])
+i=1
 for ( i in 1:nrow(predictor)){
   pred = append(pred, predictor[i,] %*% as.matrix(coef_df[i,1:3]))
 
@@ -103,7 +105,7 @@ par_height_long = par_height%>%
 
 ### check that the calculate prediction match the ggplot prediction
 # ( just to see if there is no error in the computation)
-ggplot(subset(par_height_long, par_height_long$nitrogen == "1" ))+
+ggplot(subset(par_height_long, par_height_long$treatment == "nitrogen" ))+
   geom_point(aes(time, height))+
   geom_point(aes(time, mean_height), col ="red")+
   geom_line(aes(time, pred), col ="red")+
@@ -111,6 +113,55 @@ ggplot(subset(par_height_long, par_height_long$nitrogen == "1" ))+
               se=F, linetype = 2, size = 0.5)+
   
   facet_wrap(~plot)
+summary(canopy_list_models[[1]][[2]])
+predict(canopy_list_models[[1]][[2]])
+tan.poly2 <- function(intercept, coef1, coef2, x1){ 
+  #y = f(a) - f'(a)+x
+  #y = f(a)+f'(a)(x-a)
+  # y = y1 + y'1x - y'1 * x1
+  # y = slope + y1-y'1*x1
+  y1 = coef2 * x1 ** 2 + coef1 * x1 + intercept
+  deriv = 2 * x1 * coef2  + coef1
+  
+  inter_tang = -x1*deriv + y1
+  
+  return(c(inter_tang, deriv))
+}
 
-gradient.poly2 <- function(coef1, coef2, x)  2 * coef2 * x + coef1
+###### Compute the tangent line of time = 0 and time = 38 first and last point
+tang0 = c()
+tang38 = c()
+for ( i in 1:nrow(coef_df[1:120,])){
+  inter = coef_df[i, 1]
+  coef1 = coef_df[i, 2]
+  coef2 = coef_df[i, 3]
+  tang0 = rbind(tang0,tan.poly2(inter, coef1, coef2, 0))
+  tang38 = rbind(tang38,tan.poly2(inter, coef1, coef2, 38))
+  
+} 
 
+canopy_height_growth = data.frame(tang0_intecept = tang0[,1], tang0_slope = tang0[,2],
+           tang38_intecept = tang38[,1], tang38_slope = tang38[,2],
+           plot_ID = par_height$plot_ID[1:120],
+           treatment = par_height$treatment[1:120])
+
+par_height$tang0_intecept = tang0[,1]
+par_height$tang0_slope = tang0[,2]
+par_height$tang38_intecept = tang38[,1]
+par_height$tang38_slope = tang38[,2]
+str(par_height_long)
+
+summary(canopy_list_models[[9]][[1]])
+ggplot(subset(par_height_long, par_height_long$treatment == "nitrogen" ))+
+  geom_point(aes(time, height))+
+  geom_point(aes(time, mean_height), col ="red")+
+  geom_line(aes(time, pred), col ="red")+
+  facet_wrap(~plot)+
+  geom_abline(data = subset(par_height, par_height$treatment == "nitrogen" ),
+              aes(intercept = tang0_intecept, slope = tang0_slope), col = "green")+
+  geom_abline(data = subset(par_height, par_height$treatment == "nitrogen" ),
+            aes(intercept = tang38_intecept, slope = tang38_slope), col = "blue")
+
+
+save(par_height,file = "organized_data/par_and_height.RData")  
+save(canopy_height_growth, file = "organized_data/canopy_height_growth.RData")
