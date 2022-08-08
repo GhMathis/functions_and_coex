@@ -8,6 +8,7 @@ library(ade4)
 library(partR2)
 library(tidyverse)
 library(sjPlot)
+library(glmmTMB)
 
 
 
@@ -53,7 +54,7 @@ ggplot(bioma_long)+
   facet_wrap(~type)
 
 str(bioma_long)
-mod_sp_effect = lm(data = bioma_long, biomass ~ specie)
+mod_sp_effect = lm(data = bioma_long, biomass ~ specie )
 par(mfrow = c(2, 2))
 plot(mod_sp_effect)
 par(mfrow = c(1, 1))
@@ -66,19 +67,6 @@ head(main_data)
 str(bioma)
 
 main_data = full_join(main_data, bioma, by = c("treatment", "species"))
-##### biomass and coex #####
-
-str(coexistance)
-str(bioma)
-
-
-str(data_biomass)
-ggplot(data_biomass)+
-  geom_point(aes(Omega, biomass, col = treatment))+
-  scale_x_log10()
-ggplot(data_biomass)+
-  geom_point(aes(theta, biomass, col = treatment))
-  
 
 ########## OVERVIEW COVER DATA ##########
 
@@ -233,3 +221,126 @@ temp = phospha_df[,c(1,3:4,8)]
 main_data = full_join(main_data, temp, by = c("plot_ID", "treatment"))
 names(main_data)[c(21,23)] =c("cali_grp_beta", "cali_grp_phospha")
 head(main_data)
+########### link functions and coexistance ##################
+###### Normalisation of the data ######
+
+
+
+norm.func <- function(df){
+  df_norm = df
+  for (col in 1:ncol(df)){
+    max = max(df[,col], na.rm=T)
+    min = min(df[,col], na.rm=T)
+    df_norm[,col] = (df[,col] - min )/(max - min )
+  }
+  return(df_norm)
+}
+names(main_data)
+main_data_norm = main_data
+main_data_norm[,c(12,17:20,22,24:25)] = norm.func(main_data[,c(12,17:20,22,24:25)])
+
+###### BIOMASSE ######
+
+head(main_data_norm)
+str(main_data_norm)
+main_data_norm$feasibility = as.factor(main_data_norm$feasibility)
+ggplot(main_data_norm)+
+  geom_point(aes(Omega, biomass, col = treatment))+
+  geom_smooth(aes(Omega, biomass), method = lm)+
+  scale_x_log10()
+
+
+ggplot(main_data_norm)+
+  geom_point(aes(theta, biomass, col = treatment))
+  geom_smooth(aes(theta, biomass), method = lm)+
+  scale_x_log10()
+ggplot(main_data_norm[main_data_norm$type!="mono",])+
+  geom_boxplot(aes(feasibility, biomass, col = treatment))
+hist(main_data_norm$Omega)
+
+mod_biomass = glmmTMB(biomass ~(log(Omega) + log(theta) + differential )*treatment+
+                      (1|species_1)+ (1|species_2) + (1|species_3),
+                   data = main_data_norm)
+
+par(mfrow = c(2, 2))
+plot(mod_biomass)
+par(mfrow = c(1, 1))
+hist(residuals(mod_biomass))
+summary(mod_biomass)
+plot_model(mod_biomass, show.values = TRUE, value.offset = .3, 
+           order.terms = c(1,6,2,7,3,8,4,9,5))
+
+ggplot(main_data_norm,aes(differential, biomass, label= plot_ID))+
+  geom_point()+
+  geom_text()+
+  geom_smooth(aes(differential, biomass), method = lm)+
+  facet_wrap(~treatment)
+
+##### GROWTH COEF #####
+
+mod_tang0 = glmmTMB(tang0_slope ~(log(Omega) + log(theta) + differential )*treatment+
+                      (1|species_1) + (1|species_2) + (1|species_3),
+                   data = main_data_norm)
+
+str(summary(mod_tang0))
+df_coef=cbind(as.data.frame(summary(mod_tang0)$coefficients$cond[c(7,8),]),
+              func = "tang0")
+df_coef = df_coef[1,]
+plot_model(mod_tang0, show.values = TRUE, value.offset = .3, 
+           order.terms = c(1,6,2,7,3,8,4,9,5))
+
+mod_max_heigth = glmmTMB(max_canopy_heigth ~(log(Omega) + log(theta) + differential )*treatment+
+                           (1|species_1) + (1|species_2) + (1|species_3),
+                 data = main_data_norm)
+
+summary(mod_max_heigth)
+df_coef=rbind(df_coef,cbind(as.data.frame(summary(mod_max_heigth)$coefficients$cond[c(2,4),]),
+      func = "max_heigth"))
+plot_model(mod_max_heigth, show.values = TRUE, value.offset = .3,
+           order.terms = c(1,6,2,7,3,8,4,9,5))
+head(main_data_norm)
+mod_max_time = glmmTMB(max_canopy_time ~(log(Omega) + log(theta) + differential )*treatment+
+                           (1|species_1) + (1|species_2) + (1|species_3),
+                         data = main_data_norm)
+
+summary(mod_max_time)
+df_coef=rbind(df_coef,cbind(as.data.frame(summary(mod_max_time)$coefficients$cond[c(2,4),]),
+                            func = "max_time"))
+
+plot_model(mod_max_heigth, show.values = TRUE, value.offset = .3,
+           order.terms = c(1,6,2,7,3,8,4,9,5))
+
+
+ggplot(main_data_norm)+
+  geom_point(aes(Omega,var_per_plot))+
+  facet_wrap(~treatment)
+mod_var_cover = glmmTMB(var_per_plot ~(log(Omega) + log(theta) + differential )*treatment+
+                          (1|species_1) + (1|species_2) + (1|species_3),
+                 data = main_data_norm)
+
+summary(mod_var_cover)
+plot_model(mod_var_cover, show.values = TRUE, value.offset = .3,
+           order.terms = c(1,6,2,7,3,8,4,9,5))
+
+
+
+mod_beta = glmmTMB(nytro_release_B ~(log(Omega) + log(theta) + differential )*treatment+
+                       (1|species_1) + (1|species_2) + (1|species_3)+(1|cali_grp_beta),
+                     data = main_data_norm)
+
+summary(mod_beta)
+df_coef=rbind(df_coef,cbind(as.data.frame(summary(mod_beta)$coefficients$cond[4:5,]),
+                            func = "beta"))
+df_coef = df_coef[1:6,]
+plot_model(mod_beta, show.values = TRUE, value.offset = .3,
+           order.terms = c(1,6,2,7,3,8,4,9,5))
+mod_phospha = glmmTMB(nytro_release_P ~ (log(Omega) + log(theta) + differential ) * treatment+
+                        (1|cali_grp_phospha),
+                        data = main_data_norm)
+ggplot(main_data_norm)+
+  geom_point(aes(differential, nytro_release_P))+
+  facet_wrap(~treatment)
+  scale_x_log10()
+summary(mod_phospha)
+plot_model(mod_phospha, show.values = TRUE, value.offset = .3,
+           order.terms = c(1,6,2,7,3,8,4,9,5))

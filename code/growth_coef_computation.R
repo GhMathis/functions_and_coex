@@ -161,6 +161,34 @@ ggplot(subset(par_height_long, par_height_long$treatment == "nitrogen" ))+
               aes(intercept = tang0_intecept, slope = tang0_slope), col = "green")+
   geom_abline(data = subset(par_height, par_height$treatment == "nitrogen" ),
             aes(intercept = tang38_intecept, slope = tang38_slope), col = "blue")
+max_canopy_heigth = c()
+max_canopy_time = c()
+for(n_plot in 1:60){
+  max_canopy_heigth = append(max_canopy_heigth,
+                             max(par_height[c(par_height$plot_ID == n_plot &
+                                            par_height$treatment == "control"),]$pred))
+  index = which.max(par_height[c(par_height$plot_ID == n_plot &
+                     par_height$treatment == "control"),]$pred) 
+  max_canopy_time = append(max_canopy_time,
+                           par_height[c(par_height$plot_ID == n_plot &
+                            par_height$treatment == "control"),]$time[index])
+  
+  
+  max_canopy_heigth = append(max_canopy_heigth,
+                             max(par_height[c(par_height$plot_ID == n_plot &
+                                            par_height$treatment == "nitrogen"),]$pred))
+  index = which.max(par_height[c(par_height$plot_ID == n_plot &
+                                   par_height$treatment == "nitrogen"),]$pred) 
+  max_canopy_time = append(max_canopy_time,
+                           par_height[c(par_height$plot_ID == n_plot &
+                                          par_height$treatment == "nitrogen"),]$time[index])
+  
+}
+max_canopy_time
+tail(par_height)
+names(par_height_long)
+canopy_height_growth$max_canopy_heigth = max_canopy_heigth
+canopy_height_growth$max_canopy_time = max_canopy_time
 
 
 save(par_height,file = "organized_data/par_and_height.RData")  
