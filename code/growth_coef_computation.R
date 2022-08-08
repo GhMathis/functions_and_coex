@@ -152,15 +152,19 @@ par_height$tang38_slope = tang38[,2]
 str(par_height_long)
 
 summary(canopy_list_models[[9]][[1]])
-ggplot(subset(par_height_long, par_height_long$treatment == "nitrogen" ))+
-  geom_point(aes(time, height))+
-  geom_point(aes(time, mean_height), col ="red")+
-  geom_line(aes(time, pred), col ="red")+
+ggplot(subset(par_height_long, par_height_long$treatment == "nitrogen"&
+              par_height_long$plot_ID ==34 ))+
+  geom_point(aes(time, height), cex =2)+
+  geom_line(aes(time, pred), col ="red", size =1)+
   facet_wrap(~plot)+
-  geom_abline(data = subset(par_height, par_height$treatment == "nitrogen" ),
-              aes(intercept = tang0_intecept, slope = tang0_slope), col = "green")+
-  geom_abline(data = subset(par_height, par_height$treatment == "nitrogen" ),
-            aes(intercept = tang38_intecept, slope = tang38_slope), col = "blue")
+  geom_abline(data = subset(par_height, par_height$treatment == "nitrogen"&
+                            par_height$plot_ID ==34  ),
+              aes(intercept = tang0_intecept, slope = tang0_slope),
+              col = "green", linetype =2, size =1)+
+  geom_vline(aes(xintercept = 38 ), col = "blue", size =1, linetype =2)+
+  xlab("time (in days)") + ylab("Canopy height")
+  #geom_abline(data = subset(par_height, par_height$treatment == "nitrogen" ),
+  #         aes(intercept = tang38_intecept, slope = tang38_slope), col = "blue")
 max_canopy_heigth = c()
 max_canopy_time = c()
 for(n_plot in 1:60){

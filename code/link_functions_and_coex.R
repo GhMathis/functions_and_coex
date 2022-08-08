@@ -304,6 +304,10 @@ mod_max_time = glmmTMB(max_canopy_time ~(log(Omega) + log(theta) + differential 
                          data = main_data_norm)
 
 summary(mod_max_time)
+ggplot(main_data_norm)+
+  geom_boxplot(aes(treatment, max_canopy_time))
+ggplot(main_data_norm)+
+  geom_boxplot(aes(treatment, max_canopy_heigth))
 df_coef=rbind(df_coef,cbind(as.data.frame(summary(mod_max_time)$coefficients$cond[c(2,4),]),
                             func = "max_time"))
 
@@ -344,3 +348,45 @@ ggplot(main_data_norm)+
 summary(mod_phospha)
 plot_model(mod_phospha, show.values = TRUE, value.offset = .3,
            order.terms = c(1,6,2,7,3,8,4,9,5))
+
+df_coef
+ggplot(main_data_norm)+
+  geom_point(aes(theta, tang0_slope), cex =2)+
+  geom_smooth(aes(theta, tang0_slope), method = "lm", se = F, size =1)+
+  facet_wrap(~treatment)+
+  scale_x_log10()+
+  xlab("Fitness differences (log)") + ylab("Initial growth rate ")
+
+ggplot(main_data_norm)+
+  geom_point(aes(Omega, max_canopy_heigth),cex =2)+
+  geom_smooth(aes(Omega, max_canopy_heigth), method = "lm", se = F, size =1)+
+  facet_wrap(~treatment)+
+  scale_x_log10()+
+  xlab("Niche differences (log)") + ylab("Canopy maximum height")
+
+ggplot(main_data_norm)+
+  geom_point(aes(differential, max_canopy_heigth),cex =2)+
+  geom_smooth(aes(differential, max_canopy_heigth), method = "lm", se = F, size =1)+
+  facet_wrap(~treatment)+
+  xlab("Indirect interactions") + ylab("Canopy maximum height")
+
+
+ggplot(main_data_norm)+
+  geom_point(aes(Omega, max_canopy_time),cex =2)+
+  geom_smooth(aes(Omega, max_canopy_time), method = "lm", se = F, size =1)+
+  facet_wrap(~treatment)+
+  scale_x_log10()+
+  xlab("Niche differences (log)") + ylab("Canopy maximum time")
+
+
+ggplot(main_data_norm)+
+  geom_point(aes(differential, max_canopy_time),cex =2)+
+  geom_smooth(aes(differential, max_canopy_time), method = "lm", se = F, size =1)+
+  facet_wrap(~treatment)+
+  xlab("Indirect interactions") + ylab("Canopy maximum time")
+
+ggplot(main_data_norm)+
+  geom_point(aes(differential, nytro_release_B),cex =2)+
+  geom_smooth(aes(differential, nytro_release_B), method = "lm", se = F, size =1)+
+  facet_wrap(~treatment) +
+  xlab("Indirect interactions")+ ylab("Beta-glucosidase activity")
