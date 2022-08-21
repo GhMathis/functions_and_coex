@@ -1,4 +1,4 @@
-Abs	enz	sample	nitrogen	plot	cali_cons	cali_group
+Abs	enz	sample	nitrogen	plot	calibr_cons	cali_group
 0.0528	beta_glu	cali	na	0	0	1
 0.1005	beta_glu	cali	na	0	10	1
 0.1479	beta_glu	cali	na	0	25	1
@@ -28,15 +28,15 @@ Abs	enz	sample	nitrogen	plot	cali_cons	cali_group
 0.5002	beta_glu	b	1	4		1
 0.4426	beta_glu	b	0	5		1
 0.4551	beta_glu	b	1	5		1
-0.0485	beta_glu	na	na	0	0	2
-0.098	beta_glu	na	na	0	10	2
-0.1373	beta_glu	na	na	0	25	2
-0.2349	beta_glu	na	na	0	50	2
-0.392	beta_glu	na	na	0	100	2
-0.7332	beta_glu	na	na	0	200	2
-1.0466	beta_glu	na	na	0	300	2
-1.7238	beta_glu	na	na	0	500	2
-2.3057	beta_glu	na	na	0	650	2
+0.0485	beta_glu	cali	na	0	0	2
+0.098	beta_glu	cali	na	0	10	2
+0.1373	beta_glu	cali	na	0	25	2
+0.2349	beta_glu	cali	na	0	50	2
+0.392	beta_glu	cali	na	0	100	2
+0.7332	beta_glu	cali	na	0	200	2
+1.0466	beta_glu	cali	na	0	300	2
+1.7238	beta_glu	cali	na	0	500	2
+2.3057	beta_glu	cali	na	0	650	2
 0.4174	beta_glu	a	0	6		2
 0.4631	beta_glu	a	1	6		2
 0.4518	beta_glu	a	0	7		2
@@ -93,15 +93,15 @@ Abs	enz	sample	nitrogen	plot	cali_cons	cali_group
 0.1303	beta_glu	b	1	18		2
 0.1398	beta_glu	b	0	19		2
 0.1534	beta_glu	b	1	19		2
-0.0484	beta_glu	na	na	0	0	3
-0.092	beta_glu	na	na	0	10	3
-0.1259	beta_glu	na	na	0	25	3
-0.2082	beta_glu	na	na	0	50	3
-0.3523	beta_glu	na	na	0	100	3
-0.6555	beta_glu	na	na	0	200	3
-0.9367	beta_glu	na	na	0	300	3
-1.5408	beta_glu	na	na	0	500	3
-1.9565	beta_glu	na	na	0	650	3
+0.0484	beta_glu	cali	na	0	0	3
+0.092	beta_glu	cali	na	0	10	3
+0.1259	beta_glu	cali	na	0	25	3
+0.2082	beta_glu	cali	na	0	50	3
+0.3523	beta_glu	cali	na	0	100	3
+0.6555	beta_glu	cali	na	0	200	3
+0.9367	beta_glu	cali	na	0	300	3
+1.5408	beta_glu	cali	na	0	500	3
+1.9565	beta_glu	cali	na	0	650	3
 0.4564	beta_glu	a	0	20		3
 0.503	beta_glu	a	1	20		3
 0.5257	beta_glu	a	0	21		3

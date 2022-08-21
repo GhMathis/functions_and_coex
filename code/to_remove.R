@@ -26,11 +26,6 @@ names(cover)[names(cover) == "plot" | names(cover) == "nitrogen"] = c("plot_ID",
 
 str(enz_act)
 
-enz_act$nitrogen = as.character(enz_act$nitrogen)
-enz_act$nitrogen[enz_act$nitrogen == "1"] = "nitrogen"
-enz_act$nitrogen[enz_act$nitrogen == "0"] = "control"
-names(enz_act)[names(enz_act) == "plot" | names(enz_act) == "nitrogen"] = c("treatment", "plot_ID")
-
 str(herbi)
 
 herbi$treatement = as.character(herbi$treatement)
