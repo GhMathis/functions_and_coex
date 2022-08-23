@@ -2,6 +2,7 @@ localDir="~/Fac/Cesure2/Plant_species_coexistence/functions_and_coex/"
 setwd(localDir)
 data_dir = "oster_data_2022"
 
+##### code to merge control coexistence data and nitrogen coexistence data in one df
 coexistance_N <- read.delim2(file.path(data_dir,"biomcoexistence_all_2020_nitrogen_18sp2-3.txt"),
              header =TRUE, dec =".")
 

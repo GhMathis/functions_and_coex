@@ -126,32 +126,31 @@ ggplot(par_height)+
 ##### herbi data#####
 
 head(herbi)
-
+herbi[herbi == "#DIV/0!"]=NA
 str(herbi)
 nrow(herbi)
-for(i in c(2,3)){
-  herbi[,i] = as.factor(herbi[,i])
-}
+
 for(i in 5:20){
   herbi[,i] = as.numeric(herbi[,i])
 }
 
 ggplot(herbi)+
   geom_boxplot(aes(species,perc_dmg))
-##### cover data #####
-
-cover$species.2[cover$species.2 == "-"] = NA
-cover$species.3[cover$species.3 == "-"] = NA
-names(cover)[1 : 5]= c("plot", "nitrogen", "species_1", "species_2", "species_3")
 
 ##### biomasse data #####
 str(bioma)
-bioma$biomasse = as.numeric(bioma$biomasse)
-bioma$plot = as.factor(bioma$plot)
-bioma$nitrogen = as.factor(bioma$nitrogen)
+bioma$species = apply( bioma[,c("species_1", "species_2", "species_3")], 1, 
+                       function(x) paste(x[!is.na(x)], collapse = "_"))  
+
+bioma$nitrogen = as.character(bioma$nitrogen)
+bioma$nitrogen[bioma$nitrogen == "1"] = "nitrogen"
+bioma$nitrogen[bioma$nitrogen == "0"] = "control"
+names(bioma)[names(bioma) == "plot" | names(bioma) == "nitrogen"] = c("treatment", "plot_ID")
+names(bioma)[names(bioma) == "date" ] = "season"
+
 bioma$type = ifelse(as.numeric(as.character(bioma$plot)) <= 48 ,
                       "triplet", "mono")
-bioma <- bioma  %>% mutate_all(na_if,"")
+
 ##### recap data #####
 str(enz_act)
 nrow(enz_act)
@@ -168,8 +167,10 @@ tail(bioma)
 nrow(bioma)
 
 ##### Rdata #####
-write.table(par_height, file.path("data","par_and_height.txt"), dec = ".", col.names = TRUE)
-
+write.table(par_height, file.path("data","par_and_height_OM_2022.txt"), dec = ".", col.names = TRUE)
+write.table(enz_act, file.path("data","enzimatic_activity_OM_2022.txt"), dec = ".", col.names = TRUE)
+write.table(herbi, file.path("data","herbi_patho_OM_2022.txt"), dec = ".", col.names = TRUE)
+write.table(bioma, file.path("data","biomass_OM_2022.txt"), dec = ".", col.names = TRUE)
 
 #setwd("~/Fac/Cesure2/Plant_species_coexistence/functions_and_coex")
 
